@@ -14,7 +14,6 @@ import com.tinkoff.store.R
 import com.tinkoff.store.databinding.FragmentCatalogBinding
 import com.tinkoff.store.domain.exception.ServerException
 import com.tinkoff.store.presentation.catalog.viewmodel.CatalogViewModel
-import com.tinkoff.store.presentation.main.fragment.MainPageFragmentDirections
 import com.tinkoff.store.presentation.rv.CategoryItem
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber

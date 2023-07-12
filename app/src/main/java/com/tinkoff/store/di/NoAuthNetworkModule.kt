@@ -2,9 +2,6 @@ package com.tinkoff.store.di
 
 import com.tinkoff.store.BuildConfig
 import com.tinkoff.store.data.api.NoAuthApi
-import com.tinkoff.store.data.impl.TokenRepositoryImpl
-import com.tinkoff.store.domain.repository.TokenRepository
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.qualifier.named

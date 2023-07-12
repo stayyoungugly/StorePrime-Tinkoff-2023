@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:focusedByDefault="false"
-    android:background="?attr/colorPrimary">
+    android:focusedByDefault="false">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -67,8 +67,8 @@
                 android:id="@+id/textInput_email"
                 style="@style/TextInputAuthStyle"
                 android:layout_marginTop="6dp"
-                android:focusableInTouchMode="true"
                 android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:focusedByDefault="false"
                 app:layout_constraintStart_toStartOf="@id/textView_email_title"
                 app:layout_constraintTop_toBottomOf="@+id/textView_email_title">
@@ -107,8 +107,8 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_login"
-                android:layout_marginTop="55dp"
                 style="@style/MainButtonStyle"
+                android:layout_marginTop="55dp"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -156,10 +156,10 @@
                     android:layout_height="1dp"
                     android:layout_marginEnd="25dp"
                     android:background="?attr/colorPrimarySurface"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/textView_else"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView_else"
@@ -180,10 +180,10 @@
                     android:layout_height="1dp"
                     android:layout_marginStart="25dp"
                     android:background="?attr/colorPrimarySurface"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/textView_else"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

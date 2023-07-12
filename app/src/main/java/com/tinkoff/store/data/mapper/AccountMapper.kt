@@ -1,13 +1,9 @@
 package com.tinkoff.store.data.mapper
 
 import com.google.gson.Gson
-import com.tinkoff.store.MyApplication
-import com.tinkoff.store.R
 import com.tinkoff.store.data.response.CustomerResponse
 import com.tinkoff.store.data.response.ErrorResponse
-import com.tinkoff.store.data.response.ProductResponse
 import com.tinkoff.store.domain.entity.Account
-import com.tinkoff.store.domain.entity.Product
 import com.tinkoff.store.domain.exception.ServerException
 import retrofit2.Response
 

@@ -20,7 +20,6 @@ import com.tinkoff.store.databinding.ItemCartProductBinding
 import com.tinkoff.store.domain.entity.CartProduct
 import com.tinkoff.store.domain.exception.ServerException
 import com.tinkoff.store.presentation.cart.viewmodel.CartFragmentViewModel
-import com.tinkoff.store.presentation.seller.viewmodel.SellerProductsViewModel
 import com.tinkoff.store.presentation.rv.CartProductItem
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber

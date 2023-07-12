@@ -1,13 +1,17 @@
 package com.tinkoff.store.di
 
-import kotlinx.coroutines.Dispatchers
-import com.tinkoff.store.domain.usecase.auth.*
+import com.tinkoff.store.domain.usecase.account.GetAccountUseCase
+import com.tinkoff.store.domain.usecase.auth.CustomerSignUpUseCase
+import com.tinkoff.store.domain.usecase.auth.SellerSignUpUseCase
+import com.tinkoff.store.domain.usecase.auth.SignInUseCase
+import com.tinkoff.store.domain.usecase.cart.AddToCartUseCase
+import com.tinkoff.store.domain.usecase.cart.DeleteFromCartUseCase
+import com.tinkoff.store.domain.usecase.cart.GetCartProductsUseCase
+import com.tinkoff.store.domain.usecase.category.GetCategoriesUseCase
+import com.tinkoff.store.domain.usecase.order.CreateOrderUseCase
 import com.tinkoff.store.domain.usecase.products.*
-import com.tinkoff.store.domain.usecase.category.*
-import com.tinkoff.store.domain.usecase.cart.*
-import com.tinkoff.store.domain.usecase.order.*
-import com.tinkoff.store.domain.usecase.account.*
-import com.tinkoff.store.domain.usecase.token.*
+import com.tinkoff.store.domain.usecase.token.DeleteTokenUseCase
+import kotlinx.coroutines.Dispatchers
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 

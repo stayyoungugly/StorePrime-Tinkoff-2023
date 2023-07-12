@@ -11,9 +11,7 @@ import com.mikepenz.fastadapter.binding.AbstractBindingItem
 import com.tinkoff.store.MyApplication
 import com.tinkoff.store.R
 import com.tinkoff.store.databinding.ItemCartProductBinding
-import com.tinkoff.store.databinding.ItemProductBinding
 import com.tinkoff.store.domain.entity.CartProduct
-import com.tinkoff.store.domain.entity.Product
 
 class CartProductItem(val product: CartProduct) : AbstractBindingItem<ItemCartProductBinding>() {
 

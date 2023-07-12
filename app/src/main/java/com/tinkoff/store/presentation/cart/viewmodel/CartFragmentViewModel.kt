@@ -5,11 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tinkoff.store.domain.entity.CartProduct
 import com.tinkoff.store.domain.entity.OrderProduct
-import com.tinkoff.store.domain.usecase.cart.AddToCartUseCase
 import com.tinkoff.store.domain.usecase.cart.DeleteFromCartUseCase
 import com.tinkoff.store.domain.usecase.cart.GetCartProductsUseCase
 import com.tinkoff.store.domain.usecase.order.CreateOrderUseCase
-import com.tinkoff.store.domain.usecase.products.GetProductByIdUseCase
 import com.tinkoff.store.presentation.viewmodel.SingleLiveEvent
 import kotlinx.coroutines.launch
 

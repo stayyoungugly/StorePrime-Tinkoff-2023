@@ -63,8 +63,10 @@ class ProductMapper {
         if (response.categories.isNotEmpty()) {
             when (response.categories[0]) {
                 "Игрушки" -> category = MyApplication.appContext.getString(R.string.category_toys)
-                "Мебель" -> category = MyApplication.appContext.getString(R.string.category_furniture)
-                "Продукты" -> category = MyApplication.appContext.getString(R.string.category_products)
+                "Мебель" -> category =
+                    MyApplication.appContext.getString(R.string.category_furniture)
+                "Продукты" -> category =
+                    MyApplication.appContext.getString(R.string.category_products)
                 "Зоотовары" -> category = MyApplication.appContext.getString(R.string.category_zoo)
                 "Спорт" -> category = MyApplication.appContext.getString(R.string.category_sport)
                 "Бытовая техника" -> category =
@@ -72,11 +74,15 @@ class ProductMapper {
                 "Школа" -> category = MyApplication.appContext.getString(R.string.category_school)
                 "Ювелирные изделия" -> category =
                     MyApplication.appContext.getString(R.string.category_jew)
-                "Сад и дача" -> category = MyApplication.appContext.getString(R.string.category_garden)
-                "Здоровье" -> category = MyApplication.appContext.getString(R.string.category_health)
-                "Путешествия" -> category = MyApplication.appContext.getString(R.string.category_travel)
+                "Сад и дача" -> category =
+                    MyApplication.appContext.getString(R.string.category_garden)
+                "Здоровье" -> category =
+                    MyApplication.appContext.getString(R.string.category_health)
+                "Путешествия" -> category =
+                    MyApplication.appContext.getString(R.string.category_travel)
                 "Книги" -> category = MyApplication.appContext.getString(R.string.category_books)
-                "Электроника" -> category = MyApplication.appContext.getString(R.string.category_tech)
+                "Электроника" -> category =
+                    MyApplication.appContext.getString(R.string.category_tech)
                 "Автотовары" -> category = MyApplication.appContext.getString(R.string.category_car)
             }
         }

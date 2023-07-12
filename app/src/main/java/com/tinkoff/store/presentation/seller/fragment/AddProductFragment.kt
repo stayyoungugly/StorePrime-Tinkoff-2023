@@ -11,13 +11,11 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.snackbar.Snackbar
 import com.tinkoff.store.R
 import com.tinkoff.store.databinding.FragmentAddProductBinding
-import com.tinkoff.store.presentation.seller.viewmodel.AddProductsViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.io.ByteArrayOutputStream
 
 class AddProductFragment : Fragment(R.layout.fragment_add_product) {
     private val binding by viewBinding(FragmentAddProductBinding::bind)
-  //  private val addViewModel: AddProductsViewModel by viewModel()
+    //  private val addViewModel: AddProductsViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

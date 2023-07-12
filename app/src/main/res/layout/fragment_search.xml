@@ -85,15 +85,15 @@
         android:id="@+id/textView_empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:fontFamily="@font/exo2_light"
-        android:textSize="24sp"
-        android:textColor="?attr/colorSecondary"
         android:text="@string/empty_list"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="24sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_toolbar"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_toolbar" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"

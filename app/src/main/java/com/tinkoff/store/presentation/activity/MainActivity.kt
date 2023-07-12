@@ -10,12 +10,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.tinkoff.store.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val navController = (supportFragmentManager.findFragmentById(R.id.host_fragment) as NavHostFragment)
-            .navController
+        val navController =
+            (supportFragmentManager.findFragmentById(R.id.host_fragment) as NavHostFragment)
+                .navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
         bottomNavigationView.setupWithNavController(navController)

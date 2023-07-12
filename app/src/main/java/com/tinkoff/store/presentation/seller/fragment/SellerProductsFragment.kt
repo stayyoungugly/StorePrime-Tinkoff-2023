@@ -8,19 +8,14 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.snackbar.Snackbar
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
-import com.mikepenz.fastadapter.diff.FastAdapterDiffUtil
 import com.tinkoff.store.R
 import com.tinkoff.store.databinding.FragmentSellerProductsBinding
 import com.tinkoff.store.domain.entity.CartProduct
-import com.tinkoff.store.domain.exception.ServerException
-import com.tinkoff.store.presentation.seller.viewmodel.SellerProductsViewModel
 import com.tinkoff.store.presentation.rv.CartProductItem
-import org.koin.androidx.viewmodel.ext.android.viewModel
-import timber.log.Timber
 
 class SellerProductsFragment : Fragment(R.layout.fragment_seller_products) {
     private val binding by viewBinding(FragmentSellerProductsBinding::bind)
-   // private val cartViewModel: SellerProductsViewModel by viewModel()
+    // private val cartViewModel: SellerProductsViewModel by viewModel()
 
     private val productItemAdapter by lazy {
         ItemAdapter<CartProductItem>()

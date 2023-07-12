@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 class PreferenceManager(
     private val sharedPreference: SharedPreferences
 ) {
-
     fun storeToken(token: String) {
         sharedPreference.edit().putString(TOKEN, token).apply()
     }

@@ -11,9 +11,7 @@ import com.mikepenz.fastadapter.binding.AbstractBindingItem
 import com.tinkoff.store.MyApplication
 import com.tinkoff.store.R
 import com.tinkoff.store.databinding.ItemCategoryBinding
-import com.tinkoff.store.databinding.ItemProductBinding
 import com.tinkoff.store.domain.entity.Category
-import com.tinkoff.store.domain.entity.Product
 
 class CategoryItem(val category: Category) : AbstractBindingItem<ItemCategoryBinding>() {
     val name = category.name

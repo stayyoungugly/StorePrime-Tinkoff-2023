@@ -4,7 +4,6 @@ import com.tinkoff.store.data.api.Api
 import com.tinkoff.store.data.mapper.AccountMapper
 import com.tinkoff.store.domain.entity.Account
 import com.tinkoff.store.domain.repository.AccountRepository
-import com.tinkoff.store.domain.repository.OrderRepository
 import com.tinkoff.store.domain.repository.TokenRepository
 import timber.log.Timber
 import javax.net.ssl.HttpsURLConnection

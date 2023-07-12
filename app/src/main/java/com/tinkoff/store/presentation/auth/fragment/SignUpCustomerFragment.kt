@@ -2,7 +2,6 @@ package com.tinkoff.store.presentation.auth.fragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -22,7 +21,6 @@ class SignUpCustomerFragment : Fragment(R.layout.fragment_sign_up_customer) {
     private val registrationValidator by lazy {
         RegistrationValidator()
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObservers()

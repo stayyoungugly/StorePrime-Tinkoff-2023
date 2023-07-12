@@ -14,7 +14,6 @@ class TokenRepositoryImpl(
     private var preferenceManager: PreferenceManager,
     private val tokenMapper: TokenMapper
 ) : TokenRepository {
-
     override suspend fun getToken(email: String, password: String): Result<Token> {
         val result = tokenMapper.mapToResult(noAuthApi.login(email, password))
         result.fold(onSuccess = {

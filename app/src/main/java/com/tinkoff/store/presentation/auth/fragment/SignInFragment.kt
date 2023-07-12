@@ -3,12 +3,8 @@ package com.tinkoff.store.presentation.auth.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.color.utilities.MaterialDynamicColors.onError
 import com.google.android.material.snackbar.Snackbar
 import com.tinkoff.store.R
 import com.tinkoff.store.databinding.FragmentSignInBinding
@@ -16,13 +12,10 @@ import com.tinkoff.store.domain.exception.ServerException
 import com.tinkoff.store.presentation.auth.viewmodel.SignInViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
-import java.net.URLDecoder
-import java.net.URLEncoder
 
 class SignInFragment : Fragment(R.layout.fragment_sign_in) {
     private val binding by viewBinding(FragmentSignInBinding::bind)
     private val signInViewModel: SignInViewModel by viewModel()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObservers()

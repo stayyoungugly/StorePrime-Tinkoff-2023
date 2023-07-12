@@ -1,6 +1,5 @@
 package com.tinkoff.store.data.impl
 
-import com.tinkoff.store.data.api.Api
 import com.tinkoff.store.data.api.NoAuthApi
 import com.tinkoff.store.data.mapper.SignUpMapper
 import com.tinkoff.store.data.request.AddressForm

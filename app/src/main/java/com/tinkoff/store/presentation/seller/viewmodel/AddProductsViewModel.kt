@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tinkoff.store.domain.entity.CartProduct
-import com.tinkoff.store.domain.entity.OrderProduct
 import com.tinkoff.store.domain.usecase.cart.DeleteFromCartUseCase
 import com.tinkoff.store.domain.usecase.cart.GetCartProductsUseCase
 import com.tinkoff.store.domain.usecase.order.CreateOrderUseCase
@@ -19,7 +18,6 @@ class AddProductsViewModel(
 
     private var _cartProductsList: SingleLiveEvent<Result<List<CartProduct>>?> = SingleLiveEvent()
     val cartProductsList: LiveData<Result<List<CartProduct>>?> = _cartProductsList
-
 
     fun onGetCartProducts() {
         viewModelScope.launch {

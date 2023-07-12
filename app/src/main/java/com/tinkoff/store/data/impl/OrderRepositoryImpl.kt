@@ -1,12 +1,8 @@
 package com.tinkoff.store.data.impl
 
 import com.tinkoff.store.data.api.Api
-import com.tinkoff.store.data.mapper.CartProductMapper
 import com.tinkoff.store.data.mapper.OrderProductMapper
-import com.tinkoff.store.domain.entity.CartProduct
 import com.tinkoff.store.domain.entity.OrderProduct
-import com.tinkoff.store.domain.exception.ServerException
-import com.tinkoff.store.domain.repository.CartRepository
 import com.tinkoff.store.domain.repository.OrderRepository
 import com.tinkoff.store.domain.repository.TokenRepository
 import timber.log.Timber

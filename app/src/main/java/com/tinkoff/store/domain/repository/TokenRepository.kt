@@ -1,6 +1,5 @@
 package com.tinkoff.store.domain.repository
 
-import com.tinkoff.store.data.response.TokenResponse
 import com.tinkoff.store.domain.entity.Token
 
 interface TokenRepository {

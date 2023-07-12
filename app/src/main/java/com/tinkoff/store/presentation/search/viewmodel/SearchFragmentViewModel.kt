@@ -1,13 +1,14 @@
 package com.tinkoff.store.presentation.search.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tinkoff.store.domain.entity.CartProduct
 import com.tinkoff.store.domain.entity.Product
 import com.tinkoff.store.domain.usecase.cart.AddToCartUseCase
-import com.tinkoff.store.domain.usecase.products.*
+import com.tinkoff.store.domain.usecase.products.SearchByCategoryUseCase
+import com.tinkoff.store.domain.usecase.products.SearchByQueryAndCategoryUseCase
+import com.tinkoff.store.domain.usecase.products.SearchByQueryUseCase
 import com.tinkoff.store.presentation.viewmodel.SingleLiveEvent
 import kotlinx.coroutines.launch
 

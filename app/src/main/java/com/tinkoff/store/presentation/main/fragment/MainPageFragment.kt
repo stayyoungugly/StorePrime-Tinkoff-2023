@@ -24,8 +24,8 @@ import com.tinkoff.store.databinding.FragmentMainPageBinding
 import com.tinkoff.store.databinding.ItemProductBinding
 import com.tinkoff.store.domain.entity.Product
 import com.tinkoff.store.domain.exception.ServerException
-import com.tinkoff.store.presentation.rv.ProductMainItem
 import com.tinkoff.store.presentation.main.viewmodel.MainPageViewModel
+import com.tinkoff.store.presentation.rv.ProductMainItem
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
 
