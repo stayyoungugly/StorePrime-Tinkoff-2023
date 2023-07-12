@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButton_back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="36dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_photo" />
+
+            <TextView
+                android:id="@+id/textView_add_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/exo2_light"
+                android:text="@string/add_photo"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_photo" />
+
+            <TextView
+                android:id="@+id/textView_name_title"
+                style="@style/TextViewAuthTitleStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/company_name_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_add_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_name"
+                style="@style/TextInputAuthStyle"
+                android:layout_marginTop="6dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="false"
+                app:layout_constraintStart_toStartOf="@id/textView_name_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_name"
+                    style="@style/EditTextAuthStyle"
+                    android:hint="@string/company_name"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_price_title"
+                style="@style/TextViewAuthTitleStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/price_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInput_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_price"
+                style="@style/TextInputAuthStyle"
+                android:layout_marginTop="6dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="false"
+                app:layout_constraintStart_toStartOf="@id/textView_price_title"
+                app:layout_constraintTop_toBottomOf="@id/textView_price_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_price"
+                    style="@style/EditTextAuthStyle"
+                    android:hint="@string/price_hint"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_desc_title"
+                style="@style/TextViewAuthTitleStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/desc_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInput_price" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_desc"
+                style="@style/TextInputAuthStyle"
+                android:layout_marginTop="6dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="false"
+                app:layout_constraintStart_toStartOf="@id/textView_desc_title"
+                app:layout_constraintTop_toBottomOf="@id/textView_desc_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_desc"
+                    style="@style/EditTextAuthStyle"
+                    android:hint="@string/desc_product"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_add"
+                style="@style/MainButtonStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/button_add"
+                app:layout_constraintTop_toBottomOf="@id/textInput_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton_back"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_background"
+        android:padding="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

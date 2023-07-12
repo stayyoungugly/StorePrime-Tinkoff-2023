@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="product_item_id" type="id"/>
+    <item name="category_item_id" type="id" />
+    <item name="cart_item_id" type="id" />
+</resources>

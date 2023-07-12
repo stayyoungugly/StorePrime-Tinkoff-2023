@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="false"
+    android:background="?attr/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="24dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:id="@+id/textView_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo2_bold"
+                android:text="@string/auth"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_email_title"
+                style="@style/TextViewAuthTitleStyle"
+                android:layout_marginTop="36dp"
+                android:text="@string/email_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_auth" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_email"
+                style="@style/TextInputAuthStyle"
+                android:layout_marginTop="6dp"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:focusedByDefault="false"
+                app:layout_constraintStart_toStartOf="@id/textView_email_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_email_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_email"
+                    style="@style/EditTextAuthStyle"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_password_title"
+                style="@style/TextViewAuthTitleStyle"
+                android:layout_marginTop="37dp"
+                android:text="@string/password_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInput_email" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInput_password"
+                style="@style/TextInputAuthStyle"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="@id/textView_password_title"
+                app:layout_constraintTop_toBottomOf="@id/textView_password_title"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_password"
+                    style="@style/EditTextAuthStyle"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_login"
+                android:layout_marginTop="55dp"
+                style="@style/MainButtonStyle"
+                android:text="@string/login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInput_password" />
+
+
+            <TextView
+                android:id="@+id/textView_not_registered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/exo2_extralight"
+                android:text="@string/not_registered"
+                android:textColor="?attr/colorPrimarySurface"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_login" />
+
+            <TextView
+                android:id="@+id/textView_signUp_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/exo2_extralight"
+                android:text="@string/register_as_customer"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_not_registered" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_signUp_customer">
+
+                <View
+                    android:id="@+id/view_line_first"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="?attr/colorPrimarySurface"
+                    app:layout_constraintEnd_toStartOf="@id/textView_else"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textView_else"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/exo2_extralight"
+                    android:text="@string/else_word"
+                    android:textColor="?attr/colorPrimarySurface"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_line_second"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:background="?attr/colorPrimarySurface"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textView_else"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView_signUp_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/exo2_extralight"
+                android:text="@string/register_as_seller"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_line" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

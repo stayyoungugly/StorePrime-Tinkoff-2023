@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enterScreenFragment">
+
+    <fragment
+        android:id="@+id/enterScreenFragment"
+        android:name="com.tinkoff.store.presentation.splash.EnterScreenFragment"
+        android:label="EnterScreenFragment">
+        <action
+            android:id="@+id/action_enterScreenFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.tinkoff.store.presentation.auth.fragment.SignInFragment"
+        android:label="SignInFragment">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpCustomerFragment"
+            app:destination="@id/signUpCustomerFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpSellerFragment"
+            app:destination="@id/signUpSellerFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_signInFragment_to_adminFragment"
+            app:destination="@id/adminFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpCustomerFragment"
+        android:name="com.tinkoff.store.presentation.auth.fragment.SignUpCustomerFragment"
+        android:label="SignUpCustomerFragment">
+        <action
+            android:id="@+id/action_signUpCustomerFragment_to_signUpSellerFragment"
+            app:destination="@id/signUpSellerFragment" />
+        <action
+            android:id="@+id/action_signUpCustomerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpSellerFragment"
+        android:name="com.tinkoff.store.presentation.auth.fragment.SignUpSellerFragment"
+        android:label="SignUpSellerFragment">
+        <action
+            android:id="@+id/action_signUpSellerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpSellerFragment_to_signUpCustomerFragment"
+            app:destination="@id/signUpCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.tinkoff.store.presentation.main.fragment.MainPageFragment"
+        android:label="MainPageFragment">
+        <action
+            android:id="@+id/action_mainPageFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.tinkoff.store.presentation.search.fragment.SearchFragment"
+        android:label="SearchFragment">
+        <argument
+            android:name="categoryName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="categoryType"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_searchFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.tinkoff.store.presentation.catalog.fragment.CatalogFragment"
+        android:label="CatalogFragment">
+        <action
+            android:id="@+id/action_catalogFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.tinkoff.store.presentation.cart.fragment.CartFragment"
+        android:label="CartFragment">
+        <action
+            android:id="@+id/action_cartFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_productFragment2"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.tinkoff.store.presentation.product.fragment.ProductFragment"
+        android:label="ProductFragment">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.tinkoff.store.presentation.person.user.fragment.UserFragment"
+        android:label="UserFragment">
+        <action
+            android:id="@+id/action_userFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.tinkoff.store.presentation.person.admin.fragment.AdminFragment"
+        android:label="AdminFragment">
+        <action
+            android:id="@+id/action_adminFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_adminFragment_to_sellerProductsFragment"
+            app:destination="@id/sellerProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.tinkoff.store.presentation.seller.fragment.AddProductFragment"
+        android:label="AddProductFragment" />
+    <fragment
+        android:id="@+id/sellerProductsFragment"
+        android:name="com.tinkoff.store.presentation.seller.fragment.SellerProductsFragment"
+        android:label="SellerProductsFragment">
+        <action
+            android:id="@+id/action_sellerProductsFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+    </fragment>
+</navigation>
